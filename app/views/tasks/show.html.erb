@@ -1,5 +1,11 @@
-<h2>Task</h2>
+<h2>Task <%= @task.id %>:</h2>
 
+<h3><strong>
+  <%= @task.action %>:
+</strong></h3>
 <p>
-  Task for id: <%= @task %>
+  Description: <%=@task.description%>
+</p>
+<p>
+  Due: <%=@task.completion_date%>
 </p>
