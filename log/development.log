@@ -1699,3 +1699,462 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 38ms (Views: 34.0ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-09-20 10:23:52 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (6.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/views/tasks/index.html.erb:4
+  Rendered tasks/index.html.erb within layouts/application (25.7ms)
+Completed 200 OK in 80ms (Views: 62.1ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/tasks/6" for 127.0.0.1 at 2018-09-20 10:23:53 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (2.8ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:16
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (154.8ms)
+Completed 500 Internal Server Error in 169ms (ActiveRecord: 3.2ms)
+
+
+
+NoMethodError - undefined method `edit_book' for #<#<Class:0x00007fabc6c075c8>:0x00007fabc6efce68>
+Did you mean?  edit_book_url:
+  app/views/tasks/show.html.erb:13:in `_app_views_tasks_show_html_erb__3733738435948418316_70187876873420'
+
+Started POST "/__better_errors/ebe22dfa6b0a8142/variables" for 127.0.0.1 at 2018-09-20 10:23:54 -0700
+Started GET "/tasks/6" for 127.0.0.1 at 2018-09-20 10:24:02 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:16
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (178.6ms)
+Completed 500 Internal Server Error in 188ms (ActiveRecord: 0.3ms)
+
+
+
+NoMethodError - undefined method `redirect_to' for #<#<Class:0x00007fabc6c075c8>:0x00007fabc98528a8>:
+  app/views/tasks/show.html.erb:13:in `_app_views_tasks_show_html_erb__3733738435948418316_70187898542300'
+
+Started POST "/__better_errors/4b2c7368addd34a3/variables" for 127.0.0.1 at 2018-09-20 10:24:03 -0700
+Started GET "/tasks/6" for 127.0.0.1 at 2018-09-20 10:32:21 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:16
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (153.5ms)
+Completed 500 Internal Server Error in 162ms (ActiveRecord: 0.5ms)
+
+
+
+NoMethodError - undefined method `edit_task_path' for #<#<Class:0x00007fabc6c075c8>:0x00007fabc3cfdd90>
+Did you mean?  edit_book_path:
+  app/views/tasks/show.html.erb:13:in `_app_views_tasks_show_html_erb__3733738435948418316_70187850658640'
+
+Started POST "/__better_errors/af5e47f8c36cd48e/variables" for 127.0.0.1 at 2018-09-20 10:32:21 -0700
+Started GET "/tasks/6" for 127.0.0.1 at 2018-09-20 10:32:30 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:16
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 44ms (Views: 21.5ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/tasks/6/edit" for 127.0.0.1 at 2018-09-20 10:32:32 -0700
+
+NameError - uninitialized constant TaskController:
+
+Started POST "/__better_errors/ff6ac8c2d1d29e35/variables" for 127.0.0.1 at 2018-09-20 10:32:32 -0700
+Started GET "/tasks/6" for 127.0.0.1 at 2018-09-20 10:32:34 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:16
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 21ms (Views: 17.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/6" for 127.0.0.1 at 2018-09-20 10:32:39 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:16
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 23ms (Views: 19.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/6/edit" for 127.0.0.1 at 2018-09-20 10:32:40 -0700
+
+NameError - uninitialized constant TaskController:
+
+Started POST "/__better_errors/12623221d91b412f/variables" for 127.0.0.1 at 2018-09-20 10:32:40 -0700
+Started GET "/tasks/6" for 127.0.0.1 at 2018-09-20 10:36:10 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:16
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 23ms (Views: 20.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/6/edit" for 127.0.0.1 at 2018-09-20 10:36:12 -0700
+
+NameError - uninitialized constant TaskController:
+
+Started POST "/__better_errors/afe64f8b94d613b2/variables" for 127.0.0.1 at 2018-09-20 10:36:12 -0700
+Started GET "/tasks/6/edit" for 127.0.0.1 at 2018-09-20 10:48:15 -0700
+
+NameError - uninitialized constant TaskController:
+
+Started POST "/__better_errors/be61729870e2d769/variables" for 127.0.0.1 at 2018-09-20 10:48:15 -0700
+Started GET "/tasks/6/edit" for 127.0.0.1 at 2018-09-20 11:03:37 -0700
+
+NameError - uninitialized constant TaskController:
+
+Started POST "/__better_errors/d908367d71f23400/variables" for 127.0.0.1 at 2018-09-20 11:03:37 -0700
+Started GET "/tasks/6/edit" for 127.0.0.1 at 2018-09-20 11:03:46 -0700
+
+NameError - uninitialized constant TaskController:
+
+Started POST "/__better_errors/c20f2536629e3c2e/variables" for 127.0.0.1 at 2018-09-20 11:03:46 -0700
+Started GET "/tasks/6/edit" for 127.0.0.1 at 2018-09-20 11:04:14 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:42
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 6.8ms)
+
+
+
+SyntaxError - syntax error, unexpected '<'
+<%= f.submit "Submit Post" );@...
+^
+/Users/anibelamerica/ada/unit-2/07-week/dev/TaskList/app/views/tasks/edit.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+          ^~~
+/Users/anibelamerica/ada/unit-2/07-week/dev/TaskList/app/views/tasks/edit.html.erb:14: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/anibelamerica/ada/unit-2/07-week/dev/TaskList/app/views/tasks/edit.html.erb:16: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~:
+  app/views/tasks/edit.html.erb:11:in `'
+
+Started POST "/__better_errors/ade025210ad9d1e3/variables" for 127.0.0.1 at 2018-09-20 11:04:14 -0700
+Started GET "/tasks/6/edit" for 127.0.0.1 at 2018-09-20 11:04:32 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:42
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 46ms (Views: 41.3ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/tasks/6" for 127.0.0.1 at 2018-09-20 11:22:15 -0700
+
+NameError - uninitialized constant TaskController:
+
+Started PATCH "/tasks/6" for 127.0.0.1 at 2018-09-20 12:55:07 -0700
+Processing by TasksController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qZWVR0Bjn45ZwXhpzgR3y38hTWkjcDX8I6RSDJe2K1F9RM3t5aSKp+z7AVURmLYXKLYqFjXB6SWq8R6wa2rXzw==", "task"=>{"action"=>"replace coffee", "description"=>"replace cheap coffee", "completion_date"=>"2018-09-21"}, "commit"=>"Submit Post", "id"=>"6"}
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+
+RuntimeError - <ActionController::Parameters {"utf8"=>"✓", "_method"=>"patch", "authenticity_token"=>"qZWVR0Bjn45ZwXhpzgR3y38hTWkjcDX8I6RSDJe2K1F9RM3t5aSKp+z7AVURmLYXKLYqFjXB6SWq8R6wa2rXzw==", "task"=>{"action"=>"replace coffee", "description"=>"replace cheap coffee", "completion_date"=>"2018-09-21"}, "commit"=>"Submit Post", "controller"=>"tasks", "action"=>"update", "id"=>"6"} permitted: false>:
+  app/controllers/tasks_controller.rb:46:in `update'
+
+Started GET "/tasks/6/edit" for 127.0.0.1 at 2018-09-20 12:55:11 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:42
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 96ms (Views: 56.0ms | ActiveRecord: 14.2ms)
+
+
+Started PATCH "/tasks/6" for 127.0.0.1 at 2018-09-20 12:55:16 -0700
+Processing by TasksController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CnlNRRoA+QbjTvFoXxtw6aovv1u2hdP+C+bMjF0f0x/eqBXvv8fsL1Z0iFSAh7E1/bjYJKA0DyeCs4AwocMvgQ==", "task"=>{"action"=>"replace coffee", "description"=>"replace cheap coffee", "completion_date"=>"2018-09-21"}, "commit"=>"Submit Post", "id"=>"6"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+RuntimeError - <ActionController::Parameters {"utf8"=>"✓", "_method"=>"patch", "authenticity_token"=>"CnlNRRoA+QbjTvFoXxtw6aovv1u2hdP+C+bMjF0f0x/eqBXvv8fsL1Z0iFSAh7E1/bjYJKA0DyeCs4AwocMvgQ==", "task"=>{"action"=>"replace coffee", "description"=>"replace cheap coffee", "completion_date"=>"2018-09-21"}, "commit"=>"Submit Post", "controller"=>"tasks", "action"=>"update", "id"=>"6"} permitted: false>:
+  app/controllers/tasks_controller.rb:46:in `update'
+
+Started GET "/tasks/6/edit" for 127.0.0.1 at 2018-09-20 12:57:49 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:42
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (11.4ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.3ms)
+
+
+
+NoMethodError - undefined method `model_name' for #<Hash:0x00007fabc99b1118>:
+  app/views/tasks/edit.html.erb:3:in `_app_views_tasks_edit_html_erb__3989673901349689563_70187899195160'
+
+Started POST "/__better_errors/0f4817a189c6baf1/variables" for 127.0.0.1 at 2018-09-20 12:57:49 -0700
+Started GET "/tasks/6/edit" for 127.0.0.1 at 2018-09-20 12:57:55 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:42
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 29ms (Views: 24.6ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/6" for 127.0.0.1 at 2018-09-20 12:57:59 -0700
+Processing by TasksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZNCs4E+dmfuv3eHMPVsyM5M0hEEstHV8GJCZDbPyYQ6wAfRK6lqM0hrnmPDix/PvxKPjPjoFqaWRxdWxTy6dkA==", "task"=>{"action"=>"replace coffee", "description"=>"replace bad coffee", "completion_date"=>"2018-09-21"}, "commit"=>"Submit Post", "id"=>"6"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+
+RuntimeError - <ActionController::Parameters {"utf8"=>"✓", "_method"=>"patch", "authenticity_token"=>"ZNCs4E+dmfuv3eHMPVsyM5M0hEEstHV8GJCZDbPyYQ6wAfRK6lqM0hrnmPDix/PvxKPjPjoFqaWRxdWxTy6dkA==", "task"=>{"action"=>"replace coffee", "description"=>"replace bad coffee", "completion_date"=>"2018-09-21"}, "commit"=>"Submit Post", "controller"=>"tasks", "action"=>"update", "id"=>"6"} permitted: false>:
+  app/controllers/tasks_controller.rb:46:in `update'
+
+Started POST "/__better_errors/7b638e29a53e1ca2/variables" for 127.0.0.1 at 2018-09-20 12:58:00 -0700
+Started GET "/tasks" for 127.0.0.1 at 2018-09-20 13:01:06 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/views/tasks/index.html.erb:4
+  Rendered tasks/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 52ms (Views: 42.6ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/tasks/10" for 127.0.0.1 at 2018-09-20 13:01:09 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:16
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 31ms (Views: 25.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks/8" for 127.0.0.1 at 2018-09-20 13:01:12 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:16
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 29ms (Views: 24.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks/6" for 127.0.0.1 at 2018-09-20 13:01:14 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:16
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 32ms (Views: 26.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/6/edit" for 127.0.0.1 at 2018-09-20 13:01:16 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (2.6ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:42
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 42ms (Views: 34.7ms | ActiveRecord: 2.6ms)
+
+
+Started PATCH "/tasks/6" for 127.0.0.1 at 2018-09-20 13:01:20 -0700
+Processing by TasksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hyxo5vXiNjTVM+yMaH0y4ZHOfjFT9aoLbQoaAxvhWvWNaqdgs/z6/4tULfRgBJ5t05l7URaZJ1cQ1K3FpS8Rfw==", "task"=>{"action"=>"replace coffee", "description"=>"replace bad coffee", "completion_date"=>"2018-09-21"}, "commit"=>"Submit Post", "id"=>"6"}
+  [1m[36mTask Load (0.9ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:47
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:48
+  [1m[36mTask Update (41.3ms)[0m  [1m[33mUPDATE "tasks" SET "description" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["description", "replace bad coffee"], ["updated_at", "2018-09-20 20:01:20.756144"], ["id", 6]]
+  ↳ app/controllers/tasks_controller.rb:48
+  [1m[35m (7.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:48
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 49.8ms)
+
+
+
+NoMethodError - undefined method `id' for nil:NilClass:
+  app/controllers/tasks_controller.rb:54:in `update'
+
+Started POST "/__better_errors/a706cba88a98d89a/variables" for 127.0.0.1 at 2018-09-20 13:01:20 -0700
+Started PATCH "/tasks/6" for 127.0.0.1 at 2018-09-20 13:01:51 -0700
+Processing by TasksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5p/WA6nY1M5V+S5z1rKBBdxtpOZ9OxY5GyTK/4jkyfwyTo6pDB/B5+DDV08JLkDZi/rDmWuKyuCScYZDdDg1Yg==", "task"=>{"action"=>"replace coffee", "description"=>"replace bad coffee", "completion_date"=>"2018-09-21"}, "commit"=>"Submit Post", "id"=>"6"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:47
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:48
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:48
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 4.3ms)
+
+
+
+NoMethodError - undefined method `[]' for nil:NilClass:
+  app/controllers/tasks_controller.rb:54:in `update'
+
+Started POST "/__better_errors/25c5a70671d7500e/variables" for 127.0.0.1 at 2018-09-20 13:01:51 -0700
+Started PATCH "/tasks/6" for 127.0.0.1 at 2018-09-20 13:02:02 -0700
+Processing by TasksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5p/WA6nY1M5V+S5z1rKBBdxtpOZ9OxY5GyTK/4jkyfwyTo6pDB/B5+DDV08JLkDZi/rDmWuKyuCScYZDdDg1Yg==", "task"=>{"action"=>"replace coffee", "description"=>"replace bad coffee", "completion_date"=>"2018-09-21"}, "commit"=>"Submit Post", "id"=>"6"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:48
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:48
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 3.1ms)
+
+
+
+NoMethodError - undefined method `[]' for nil:NilClass:
+  app/controllers/tasks_controller.rb:54:in `update'
+
+Started POST "/__better_errors/b104388227075218/variables" for 127.0.0.1 at 2018-09-20 13:02:02 -0700
+Started PATCH "/tasks/6" for 127.0.0.1 at 2018-09-20 13:02:21 -0700
+Processing by TasksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5p/WA6nY1M5V+S5z1rKBBdxtpOZ9OxY5GyTK/4jkyfwyTo6pDB/B5+DDV08JLkDZi/rDmWuKyuCScYZDdDg1Yg==", "task"=>{"action"=>"replace coffee", "description"=>"replace bad coffee", "completion_date"=>"2018-09-21"}, "commit"=>"Submit Post", "id"=>"6"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:48
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:48
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 2.5ms)
+
+
+
+NoMethodError - undefined method `id' for nil:NilClass:
+  app/controllers/tasks_controller.rb:54:in `update'
+
+Started POST "/__better_errors/1993dfa5ee7a1ee4/variables" for 127.0.0.1 at 2018-09-20 13:02:21 -0700
+Started PATCH "/tasks/6" for 127.0.0.1 at 2018-09-20 13:02:31 -0700
+Processing by TasksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5p/WA6nY1M5V+S5z1rKBBdxtpOZ9OxY5GyTK/4jkyfwyTo6pDB/B5+DDV08JLkDZi/rDmWuKyuCScYZDdDg1Yg==", "task"=>{"action"=>"replace coffee", "description"=>"replace bad coffee", "completion_date"=>"2018-09-21"}, "commit"=>"Submit Post", "id"=>"6"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:48
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:48
+Redirected to http://localhost:3000/tasks/6
+Completed 302 Found in 12ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/tasks/6" for 127.0.0.1 at 2018-09-20 13:02:31 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:16
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 33ms (Views: 29.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2018-09-20 13:02:36 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/views/tasks/index.html.erb:4
+  Rendered tasks/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 35ms (Views: 31.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tasks/8" for 127.0.0.1 at 2018-09-20 13:02:38 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mTask Load (1.6ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:16
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 30ms (Views: 24.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/tasks/7" for 127.0.0.1 at 2018-09-20 13:02:40 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:16
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 28ms (Views: 24.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks/10" for 127.0.0.1 at 2018-09-20 13:02:43 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:16
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 31ms (Views: 26.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/6" for 127.0.0.1 at 2018-09-20 13:02:46 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:16
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 30ms (Views: 25.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/12" for 127.0.0.1 at 2018-09-20 13:02:49 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:16
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 27ms (Views: 22.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/6" for 127.0.0.1 at 2018-09-20 13:02:52 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (1.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:16
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 33ms (Views: 27.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2018-09-20 13:57:49 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/views/tasks/index.html.erb:4
+  Rendered tasks/index.html.erb within layouts/application (27.6ms)
+Completed 200 OK in 63ms (Views: 44.0ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-09-20 13:57:51 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 33ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+
+
