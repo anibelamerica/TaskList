@@ -25,9 +25,7 @@ class TasksController < ApplicationController
 
   def create
     task = Task.new(
-      action: params[:task][:action],
-      description: params[:task][:description],
-      completion_date: Date.parse(params[:task][:completion_date])
+      task_params
     )
 
     if task.save
@@ -38,24 +36,33 @@ class TasksController < ApplicationController
   end
 
   def edit
-    @task = Task.find(params[:id])
+    @task = Task.find_by(id: params[:id])
   end
 
   def update
     # raise params.inspect
     @task = Task.find(params[:id])
-    @task.update(
-      action: params[:task][:action],
-      description: params[:task][:description],
-      completion_date: Date.parse(params[:task][:completion_date])
-    )
 
-    redirect_to task_path(@task.id)
+    if @task.update(task_params)
+      redirect_to task_path(@task.id)
+    else
+      render :update
+    end
   end
 
   def destroy
     Task.find_by(id: params[:id]).destroy
     redirect_to root_path
+  end
+
+  private
+
+  def task_params
+    return params.require(:task).permit(
+      :action,
+      :description,
+      :completion_date
+    )
   end
 
 end
