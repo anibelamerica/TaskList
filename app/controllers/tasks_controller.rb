@@ -24,13 +24,13 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.new(
+    task = Task.new(
       action: params[:task][:action],
       description: params[:task][:description],
       completion_date: Date.parse(params[:task][:completion_date])
     )
 
-    if @task.save
+    if task.save
       redirect_to root_path
     else
       render :new
