@@ -65,4 +65,10 @@ class TasksController < ApplicationController
     )
   end
 
+  def complete
+    Task.find_by(id: params[:id])
+    redirect_to root_path
+
+  end
+
 end

@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   root 'tasks#index'
 
   resources :tasks
+
+  post '/tasks/:id/complete', to: 'tasks#complete', as: 'complete'
   # get '/tasks', to: 'tasks#index', as: 'tasks'
   #
   # get 'tasks/new', to: 'tasks#new', as: 'new_task'
