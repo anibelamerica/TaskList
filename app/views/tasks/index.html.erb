@@ -1,14 +1,11 @@
-<h1>Tasks</h1>
+<h1>Task List</h1>
 
 <ul>
   <% @tasks.each do |task| %>
     <li>
       <%= link_to task.action, task_path(task.id) %>
-      <%= button_to "Delete", task, method: :delete, data: { confirm: "Do you truly want to remove this task?" } %>
+      <%= button_to "Delete", task_path(task), method: :delete, data: { confirm: "Do you truly want to remove Task: #{task.action}?" } %>
     </li>
-    <!-- <li>
-
-    </li> -->
   <% end %>
 </ul>
 
