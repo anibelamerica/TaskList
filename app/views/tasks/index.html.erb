@@ -19,7 +19,6 @@
         <% else %>
           <%= link_to "Unmark Complete", complete_path(task.id), method: :patch%>
           <% end%>
-        </div>
       </li>
       <li>
         <%= link_to "View Details", task_path(task.id) %>

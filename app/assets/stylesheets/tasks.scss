@@ -5,10 +5,6 @@
   text-decoration: line-through;
 }
 
-// .main_view * {
-//   border: solid black 1px;
-// }
-
 .main_view {
   display: flex;
   flex-direction: column;;
@@ -34,6 +30,10 @@
   margin-right: 5px;
 }
 
+.task_list > * {
+  margin-left: 5px;
+}
+
 a[href] {
   text-decoration: none;
   color: black;
@@ -45,23 +45,7 @@ a[href]:hover {
 }
 
 ul > li + li {
-    margin-left: 5px;
-    padding-left: 5px;
-    border-left: 1px solid #bbb;
+  margin-left: 5px;
+  padding-left: 5px;
+  border-left: 1px solid #bbb;
 }
-
-// .task_list {
-//   display: flex;
-//   flex-direction: column;
-// }
-
-// .edit_task {
-//   // margin-left: 25%;
-//   // margin-right: 25%;
-//   // justify-self: center;
-//   // box-sizing: content-box;
-//   display: inline;
-//   padding: 2%;
-//   margin-left: 25%;
-//   border: solid 1px black;
-// }
