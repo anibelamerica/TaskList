@@ -1,25 +1,27 @@
-<h3>Your Tasks</h3>
+<section class="main_view">
+  <h3>Your Tasks</h3>
 
-<ul>
-  <% @tasks.each do |task| %>
+  <ul>
+    <% @tasks.each do |task| %>
     <li>
-      <%= task.action%>
+    <%= task.action%>
 
-      <% if !task.mark_complete %>
-          <div class="mark_complete">
-          <%= link_to "Mark Complete", complete_path(task.id), method: :patch %>
-      <% else %>
-          <div class="unmark_complete">
-          <%= link_to "Unmark Complete", complete_path(task.id), method: :patch%>
+    <% if !task.mark_complete %>
+    <div class="mark_complete">
+      <%= link_to "Mark Complete", complete_path(task.id), method: :patch %>
+    <% else %>
+    <div class="unmark_complete">
+      <%= link_to "Unmark Complete", complete_path(task.id), method: :patch%>
       <% end%>
-      </div>
+    </div>
 
-      <%= link_to "View Details", task_path(task.id) %>
-      <%= link_to "Delete", task_path(task), method: :delete, data: { confirm: "Do you truly want to remove Task: #{task.action}?" } %>
+    <%= link_to "View Details", task_path(task.id) %>
+    <%= link_to "Delete", task_path(task), method: :delete, data: { confirm: "Do you truly want to remove Task: #{task.action}?" } %>
     </li>
   <% end %>
-</ul>
+  </ul>
 
-<p>
+  <!-- <p>
   <%= link_to "Add new task", new_task_path %>
-</p>
+  </p> -->
+</section>

@@ -13,3 +13,32 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+  border: black dashed 1px;
+}
+
+
+body {
+  display: grid;
+  grid-template: 1fr 4fr 1fr / 30% 70%;
+  height: 100vh;
+}
+
+
+body > section.title {
+  grid-column: 1 / -1;
+}
+
+
+header {
+  grid-row: 2 / 3;
+}
+
+.main_view {
+  grid-row: 2 / 3;
+}
+
+footer {
+  grid-area: 3 / 1 / 4 / -1;
+}

@@ -9,23 +9,26 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <section>
-    <h1>Task List</h1>
-  </section>
-
-  <header>
-    <ul>
-      <li>
-        <%= link_to "Add Task", new_task_path %>
-        <%= link_to "All Task", tasks_path %>
-      </li>
-    </ul>
-  </header>
-
-
-
-
   <body>
+
+    <section class="title">
+      <h1>Task List</h1>
+    </section>
+
+    <header>
+      <ul>
+        <li>
+          <%= link_to "Add Task", new_task_path %>
+          <%= link_to "All Task", tasks_path %>
+        </li>
+      </ul>
+    </header>
+
     <%= yield %>
+
+    <footer>
+      <h4>&copy; 2018</h4>
+    </footer>
+
   </body>
 </html>
