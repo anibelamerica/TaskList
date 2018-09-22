@@ -1,15 +1,17 @@
-<h2>Task <%= @task.id %>:</h2>
+<section class="main_view">
+  <h2>Task <%= @task.id %>:</h2>
 
-<h3><strong>
-  <%= @task.action %>:
-</strong></h3>
-<p>
-  Description: <%=@task.description%>
-</p>
-<p>
-  Completion date:
-  <%=@task.completion_date ? @task.completion_date : "Incomplete"%>
-</p>
-<p>
-  <%=link_to "Edit Task", edit_task_path(@task.id)%>
-</p>
+  <h3><strong>
+    <%= @task.action %>:
+  </strong></h3>
+  <p>
+    Description: <%=@task.description%>
+  </p>
+  <p>
+    Completion date:
+    <%=@task.completion_date ? @task.completion_date : "Incomplete"%>
+  </p>
+  <p>
+    <%=link_to "Edit Task", edit_task_path(@task.id)%>
+  </p>
+</section>

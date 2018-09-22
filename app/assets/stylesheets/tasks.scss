@@ -4,3 +4,32 @@
 .unmark_complete {
   text-decoration: line-through;
 }
+
+// .main_view * {
+//   border: solid black 1px;
+// }
+
+.main_view {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2%;
+}
+
+.task_list ul{
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  // flex-direction: column;
+  // justify-content: flex-end;
+}
+
+.task_list li {
+  margin-right: 5px;
+
+}
+
+ul > li + li {
+    margin-left: 5px;
+    padding-left: 5px;
+    border-left: 1px solid #bbb;
+}
