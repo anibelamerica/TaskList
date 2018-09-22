@@ -3,18 +3,20 @@
 
   <section class='task_list'>
     <% @tasks.each_with_index do |task, task_number| %>
-    <h3>
-    <%= "Task #{task_number + 1}: #{task.action}"%>
-    </h3>
+      <% if !task.mark_complete %>
+      <h4 class="mark_complete">
+        <% else %>
+      <h4 class="unmark_complete">
+      <% end %>
+        <%= "#{task_number + 1}: #{task.action}"%>
+      </h4>
 
 
     <ul>
       <li>
         <% if !task.mark_complete %>
-        <div class="mark_complete">
           <%= link_to "Mark Complete", complete_path(task.id), method: :patch %>
         <% else %>
-        <div class="unmark_complete">
           <%= link_to "Unmark Complete", complete_path(task.id), method: :patch%>
           <% end%>
         </div>

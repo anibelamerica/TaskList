@@ -11,21 +11,37 @@
 
 .main_view {
   display: flex;
-  flex-direction: column;
-  padding-left: 2%;
+  flex-direction: column;;
+  align-items: center;
+}
+
+.main_view h3 {
+  font-weight: bold;
+  font-size: 1.3em;
+  align-self: center;
+  text-transform: uppercase;
 }
 
 .task_list ul{
   display: flex;
   list-style-type: none;
   padding: 0;
-  // flex-direction: column;
-  // justify-content: flex-end;
+  margin-top: -4%;
+  margin-bottom: 4%;
 }
 
 .task_list li {
   margin-right: 5px;
+}
 
+a[href] {
+  text-decoration: none;
+  color: black;
+}
+
+a[href]:hover {
+  font-weight: bolder;
+  color: darkred;
 }
 
 ul > li + li {
@@ -33,3 +49,19 @@ ul > li + li {
     padding-left: 5px;
     border-left: 1px solid #bbb;
 }
+
+// .task_list {
+//   display: flex;
+//   flex-direction: column;
+// }
+
+// .edit_task {
+//   // margin-left: 25%;
+//   // margin-right: 25%;
+//   // justify-self: center;
+//   // box-sizing: content-box;
+//   display: inline;
+//   padding: 2%;
+//   margin-left: 25%;
+//   border: solid 1px black;
+// }
