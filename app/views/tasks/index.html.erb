@@ -4,7 +4,17 @@
   <% @tasks.each do |task| %>
     <li>
       <%= task.action%>
-      <%= link_to "Edit", task_path(task.id) %>
+
+      <% if !task.mark_complete %>
+          <div class="mark_complete">
+          <%= link_to "Mark Complete", complete_path(task.id), method: :patch %>
+      <% else %>
+          <div class="unmark_complete">
+          <%= link_to "Unmark Complete", complete_path(task.id), method: :patch%>
+      <% end%>
+      </div>
+
+      <%= link_to "View Details", task_path(task.id) %>
       <%= link_to "Delete", task_path(task), method: :delete, data: { confirm: "Do you truly want to remove Task: #{task.action}?" } %>
     </li>
   <% end %>

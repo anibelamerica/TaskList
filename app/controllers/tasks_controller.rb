@@ -8,7 +8,9 @@
 class TasksController < ApplicationController
 
   def index
-    @tasks = Task.all
+    @tasks = Task.all.sort_by do |task|
+      task.id
+    end
   end
 
   def show
@@ -40,8 +42,7 @@ class TasksController < ApplicationController
   end
 
   def update
-    # raise params.inspect
-    @task = Task.find(params[:id])
+    @task = Task.find_by(id: params[:id])
 
     if @task.update(task_params)
       redirect_to task_path(@task.id)
@@ -55,20 +56,24 @@ class TasksController < ApplicationController
     redirect_to root_path
   end
 
+  def complete
+    @task = Task.find(params[:id])
+    if @task.update_attributes(:mark_complete => !@task.mark_complete, :completion_date => (@task.mark_complete ? nil : Date.today))
+      redirect_to root_path
+    end
+  end
+
   private
 
   def task_params
     return params.require(:task).permit(
       :action,
       :description,
-      :completion_date
+      :completion_date,
+      :mark_complete
     )
   end
 
-  def complete
-    Task.find_by(id: params[:id])
-    redirect_to root_path
 
-  end
 
 end
